@@ -1,3 +1,4 @@
+#include "log.h"
 #include <iostream>
 
 //定义
