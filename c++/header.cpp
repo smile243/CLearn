@@ -16,5 +16,6 @@ int main()
     //可看作std::cout.print("hello world").print(std::endl)  但是不能这么写！！
     //std::cout<<"hello world"<<std::endl;
     Log("hello world");
+    int a = 8;
     return 0;
 }
