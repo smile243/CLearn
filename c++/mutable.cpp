@@ -2,7 +2,7 @@
 class Entity{
     private:
     int x;
-    //const函数中无法修改变量，mutable能够跳出这个限制
+    //const函数中无法修改成员变量，mutable能够跳出这个限制
     mutable int y;
     public:
     void getX() const{
