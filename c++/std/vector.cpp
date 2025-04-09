@@ -29,6 +29,7 @@ public:
 */
 int main()
 {
+    //vector在堆上创建，而array是在栈上创建的
     std::vector<Person> vector;
     vector.reserve(3);
     //push 是函数内部构造然后复制到vector中
