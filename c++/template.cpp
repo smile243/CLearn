@@ -1,5 +1,6 @@
 #include <iostream>
 //模版
+//模版只有在实际调用时才会实例化，实例化时才会检查语法；
 template <typename T> void bubbleSortAndPrint(T a[], int n)
 {
     for (int i = 0; i < n - 1; i++)
@@ -19,6 +20,6 @@ int main()
     bubbleSortAndPrint(a, n);
     char b[5] = { 'a', 'd', 'b', 'e', 'c'};
     n = 5;
-    bubbleSortAndPrint(b, n);
+    bubbleSortAndPrint<char>(b, n);
     return 0;
 }

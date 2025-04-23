@@ -1,7 +1,7 @@
 #include <vector>
 #include <string>
 #include <iostream>
-
+/// vector 不会进行数据越界检查，谨慎根据下表获取元素，越界会有意想不到的问题
 class Person
 {
 private:
@@ -20,6 +20,9 @@ public:
     {
         std::cout<<"del"<<std::endl;
     }
+    void getAge() const{
+            std::cout<<_age<<std::endl;
+    }
 };
 
 /**
@@ -30,7 +33,7 @@ public:
 int main()
 {
     //vector在堆上创建，而array是在栈上创建的
-    std::vector<Person> vector;
+    std::vector<Person> vector{};
     vector.reserve(3);
     //push 是函数内部构造然后复制到vector中
     // vector.push_back(Person("zs",12));
@@ -40,7 +43,11 @@ int main()
     vector.emplace_back("zs",12);
     vector.emplace_back("ls",13);
     vector.emplace_back("ww",14);
+    vector[2].getAge();
     // for(const Person& p:vector){
-    //     std::cout<<"123"<<std::endl;
+    //     p.getAge();
     // }
+    std::vector<int> v2{3};
+    std::cout<<v2[0]<<std::endl;
+    return 0;
 }
